@@ -46,3 +46,17 @@ body {
     text-decoration: none;
     cursor: pointer;
 }
+
+/* Adaptação para dispositivos móveis */
+@media screen and (max-width: 600px) {
+    nav ul {
+        text-align: center;
+    }
+    nav ul li {
+        display: block;
+        margin: 10px auto;
+    }
+    main {
+        grid-template-columns: 1fr;
+    }
+}
