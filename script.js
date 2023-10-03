@@ -27,8 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
             alert('Usuário ou senha incorretos. Tente novamente.');
         }
     });
-});
-document.addEventListener('DOMContentLoaded', function() {
+
     const addToCartButtons = document.querySelectorAll('.add-to-cart');
     const cartContainer = document.getElementById('cart-container');
 
@@ -49,4 +48,3 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
-
