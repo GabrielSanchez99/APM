@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
             novoItem.classList.add('cart-item');
             novoItem.innerHTML = `
                 <span>${nome}</span>
-                <span>R$${preco.toFixed(2)}</span>
+                <span>€${preco.toFixed(2)}</span>
             `;
 
             cartContainer.appendChild(novoItem);
