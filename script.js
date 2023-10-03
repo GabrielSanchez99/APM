@@ -16,10 +16,8 @@ document.addEventListener('DOMContentLoaded', function() {
         event.preventDefault();
         const username = document.getElementById('username').value;
         const password = document.getElementById('password').value;
-
-        // Aqui você pode adicionar a lógica de autenticação (por exemplo, verificar em um banco de dados)
-
-        // Exemplo simples de verificação de usuário e senha
+        
+        //verificação de usuário e senha
         if (username === 'admin' && password === 'password') {
             alert('Login bem-sucedido!');
             loginModal.style.display = 'none';
@@ -30,3 +28,25 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+document.addEventListener('DOMContentLoaded', function() {
+    const addToCartButtons = document.querySelectorAll('.add-to-cart');
+    const cartContainer = document.getElementById('cart-container');
+
+    addToCartButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const produto = this.parentNode;
+            const nome = produto.dataset.nome;
+            const preco = parseFloat(produto.dataset.preco);
+
+            const novoItem = document.createElement('div');
+            novoItem.classList.add('cart-item');
+            novoItem.innerHTML = `
+                <span>${nome}</span>
+                <span>R$${preco.toFixed(2)}</span>
+            `;
+
+            cartContainer.appendChild(novoItem);
+        });
+    });
+});
+
